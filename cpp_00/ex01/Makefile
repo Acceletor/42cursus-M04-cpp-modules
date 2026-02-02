@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = My_Awesome_PhoneBook
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf

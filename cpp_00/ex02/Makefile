@@ -1,4 +1,4 @@
-NAME = account
+NAME = The_Job_Of_Your_Dreams
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
