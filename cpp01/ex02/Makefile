@@ -10,7 +10,7 @@ GREEN = \033[0;32m
 RESET = \033[0m
 
 all: $(NAME)
-		@echo "$(GREEN)[Program is ready for use]$(RESET)"
+	@echo "$(GREEN)[Program is ready for use]$(RESET)"
 
 %.o: %.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
