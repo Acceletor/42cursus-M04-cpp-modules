@@ -12,7 +12,7 @@ Fixed::Fixed(const int number) {
 }
 
 Fixed::Fixed(const float number) {
-    _fixed_point_number = static_cast<int>(number * (1 << _number_of_fractional_bits));
+    _fixed_point_number = (int)roundf(number * (1 << _number_of_fractional_bits));
     std::cout << "Float constructor called" << std::endl;
 }
 
