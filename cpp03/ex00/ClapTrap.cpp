@@ -1,4 +1,4 @@
-#include " ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0) {
     std::cout << "ClapTrap Default constructor called.\n";
