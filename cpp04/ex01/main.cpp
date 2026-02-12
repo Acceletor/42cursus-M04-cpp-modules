@@ -17,17 +17,14 @@ static void arrayTest() {
     for (int i = 0; i < (NB_ANIMALS/2); i++) {
         tab[i] = new Cat;
     }
-    std::cout << std::endl;
     std::cout << "----Creating Dogs\n";
     for (int i = NB_ANIMALS/2; i < NB_ANIMALS; i++) {
         tab[i] = new Dog;
     }
-    std::cout << std::endl;
     std::cout << "----All of them make sound\n";
     for (int i = 0; i < NB_ANIMALS; i++) {
         tab[i]->makeSound();
     }
-    std::cout << std::endl;
     std::cout << "----Deleting them all\n";
     for (int i = 0; i < NB_ANIMALS; i++) {
         delete tab[i];
@@ -57,25 +54,28 @@ static void catCopyTest() {
 }
 
 static void dogCopyTest() {
-    Dog original;
-    original.getBrain()->setIdea(0, "I want bone");
-    original.getBrain()->setIdea(1, "I want sleep");
-    printIdea(original.getBrain(), 0, "original");
-    printIdea(original.getBrain(), 1, "original");
+    Dog* original = new Dog();
+    original->getBrain()->setIdea(0, "I want bone");
+    original->getBrain()->setIdea(1, "I want sleep");
+    printIdea(original->getBrain(), 0, "original");
+    printIdea(original->getBrain(), 1, "original");
 
     std::cout << "----copy Orignal dog\n";
-    Dog copyDog(original);
-    original.getBrain()->setIdea(0, "I change my mind");
+    Dog* copyDog = new Dog(*original);
+    original->getBrain()->setIdea(0, "I change my mind");
 
     std::cout << "----After modifying original\n";
-    printIdea(original.getBrain(), 0, "original");
-    printIdea(copyDog.getBrain(), 0, "copy");
+    printIdea(original->getBrain(), 0, "original");
+    printIdea(copyDog->getBrain(), 0, "copy");
 
     std::cout << "----Test copy assignment -------\n";
-    copyDog = original;
-    printIdea(original.getBrain(), 0, "original");
-    printIdea(copyDog.getBrain(), 0, "copy");
+    *copyDog = *original;
+    printIdea(original->getBrain(), 0, "original");
+    printIdea(copyDog->getBrain(), 0, "copy");
+
     std::cout << "----Deconstructor calling -------\n";
+    delete original;
+    delete copyDog;
 }
 
 int main()
