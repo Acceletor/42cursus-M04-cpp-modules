@@ -137,7 +137,7 @@ bool PhoneBook::cmdSearch()
         std::cout << "Invalid index.\n";
         return true;
     }
-    int idx = std::stoi(s);
+    int idx = s[0] - '0';
     if (!isValidIndex(idx))
     {
         std::cout << "Index out of range.\n";
