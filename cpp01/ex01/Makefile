@@ -1,6 +1,6 @@
 NAME = Moar_brainz
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp

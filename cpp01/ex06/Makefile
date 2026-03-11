@@ -1,6 +1,6 @@
 NAME = harlFilter
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 --pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 GREEN = \033[0;32m

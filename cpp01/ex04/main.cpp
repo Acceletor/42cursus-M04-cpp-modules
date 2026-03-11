@@ -5,8 +5,8 @@
 static bool open_files(std::string& nameInputFile, std::string& nameOutputFile,
     std::ifstream& inputFile, std::ofstream& outputFile)
 {
-    inputFile.open(nameInputFile, std::ios::in);
-    outputFile.open(nameOutputFile, std::ios::out);
+    inputFile.open(nameInputFile.c_str(), std::ios::in);
+    outputFile.open(nameOutputFile.c_str(), std::ios::out);
     if (!inputFile || !outputFile)
     {
         std::cerr << "Failed to open files" << std::endl;

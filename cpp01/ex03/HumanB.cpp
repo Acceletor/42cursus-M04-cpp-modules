@@ -1,6 +1,6 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): _name(name), _weapon(nullptr) {
+HumanB::HumanB(std::string name): _name(name), _weapon(NULL) {
     std::cout << "Human name " << _name << " is Created without a weapon"
         << std::endl;
 }
